@@ -34,11 +34,11 @@ public class BurgerTest {
         Assert.assertEquals(burger.bun,bun);
     }
 
-    @Test
+    /*@Test
     public void addIngredientTest(){
         burger.addIngredient(ingredient);
         Assert.assertNotNull(burger.ingredients);
-    }
+    }*/
 
     @Test
     public void priceCorrectTest(){
@@ -48,7 +48,8 @@ public class BurgerTest {
         when(ingredient.getPrice()).thenReturn(price);
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
-        Assert.assertTrue(expectedPrice == burger.getPrice());
+        //Assert.assertTrue(expectedPrice == burger.getPrice());
+        Assert.assertEquals(expectedPrice,burger.getPrice(),price);
 
     }
 
@@ -71,7 +72,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void AddIngredientTest() {
+    public void addIngredientTest() {
         burger.addIngredient(ingredient);
         Assert.assertNotNull(burger.ingredients);
     }

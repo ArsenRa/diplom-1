@@ -14,18 +14,18 @@ public class BunTest {
     @Test
     public void getBunNameCorrect() {
         Bun bun = new Bun("Булошка",350.F);
-        String actual = bun.getName();
         String expected = "Булошка";
-        assertEquals(actual,expected);
+        String actual = bun.getName();
+        assertEquals(expected,actual);
 
     }
 
     @Test
     public void getBunPriceCorrect() {
         Bun bun = new Bun("Булошка",350.F);
-        float actual = bun.getPrice();
         float expected = 350.F;
-        assertEquals(actual,expected, 230.F);
+        float actual = bun.getPrice();
+        assertEquals(expected,actual, 230.F);
 
     }
 }
